@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo-bg.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/styles/css/nullstyle.css" />
+    <link rel="stylesheet" href="./assets/styles/css/header.css" />
+    <link rel="stylesheet" href="./assets/styles/css/appointment.css" />
+    <link rel="stylesheet" href="./assets/styles/css/calendar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header id="header">
+      <nav class="navbar container">
+        <a class="navbar__brand" aria-current="page" href="./index.html"
+          ><img src="./assets/img/logo.png" width="118" alt="logo"
+        /></a>
+        <button class="navbar__toggler" id="navbar-toggler">X</button>
+        <ul class="navbar__list" id="navbar-list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./appointment1.html">appointment</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./index.html">about Us</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./index.html">doctors</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">shop </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contact.html">contact</a>
+          </li>
+          <li class="navbar__item__btn">
+            <a class="navbar__btn btn" href="./login.html"
+              ><span class="cover"></span> Sign In</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--==================== APPOINTMENT ====================-->
+      <section class="appointment" id="appointment">
+        <div class="appointment__container container">
+          <form id="form" action="./appointment3.html">
+            <!--==================== STEP DATE ====================-->
+            <fieldset>
+              <div class="fieldset">
+                <div class="step__container">
+                  <div class="subtitle"><h2>choose date + time</h2></div>
+                  <div class="date__time">
+                    <div class="calendar calendar__first" id="calendar-first">
+                      <div class="calendar__header">
+                        <button class="switch__month switch__left">
+                          <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <h2></h2>
+                        <button class="switch__month switch__right">
+                          <i class="fa fa-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="calendar__weekdays"></div>
+                      <div class="calendar__content"></div>
+                    </div>
+                    <div class="time">
+                      <div class="send">
+                        <input
+                          type="button"
+                          name="Enter Date"
+                          class="send__btn"
+                          value="Reload Date"
+                        />
+                      </div>
+                      <select class="time__select">
+                        <option value="" disabled selected>Choose time</option>
+                        <option value="09">09:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                        <option value="16">16:00</option>
+                        <option value="17">17:00</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step__numbers">
+                    <div class="step__number step__number__on">1</div>
+                    <div class="step__number step__number__on">2</div>
+                    <div class="step__number">3</div>
+                  </div>
+                  <div class="step__info">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"
+                      />
+                    </svg>
+                    <div class="subtitle"><h3>schedule an appointment</h3></div>
+                    <p>
+                      Follow the steps to set up an appointment with us to get
+                      the best isnurance solution
+                    </p>
+                  </div>
+                  <div class="step__contacts">
+                    <div class="step__contacts__number">100100100</div>
+                    <div class="step__contacts__email">hi@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+
+              <input
+                type="button"
+                name="previous"
+                class="previous action__btn__previous"
+                value="Previous"
+              />
+              <input
+                type="submit"
+                name="next"
+                class="submit action__btn"
+                value="Next"
+              />
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/jquery-3.6.3.min.js"></script>
+    <script src="./assets/js/appointment.js"></script>
+    <script src="./assets/js/calendar.js"></script>
+  </body>
+</html>

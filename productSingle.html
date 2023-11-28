@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo-bg.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/styles/css/nullstyle.css" />
+    <link rel="stylesheet" href="./assets/styles/css/headerShop.css" />
+    <link rel="stylesheet" href="./assets/styles/css/productSingle.css" />
+    <link rel="stylesheet" href="./assets/styles/css/footerShop.css" />
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header id="header">
+      <nav class="navbar container">
+        <a class="navbar__brand" aria-current="page" href="./index.html"
+          ><img src="./assets/img/logo.png" width="118" alt="logo"
+        /></a>
+        <!-- <button class="navbar__toggler" id="navbar-toggler">X</button> -->
+        <ul class="navbar__list" id="navbar-list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./index.html">diabet</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./appointment.html">appointment</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">products</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./blockchain.html">blockchain</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contact.html">contact</a>
+          </li>
+        </ul>
+        <div class="icons">
+          <a href="" class="icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <a href="./login.html" class="icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!--==================== PRODUCT ====================-->
+      <section class="product">
+        <div class="product__container container">
+          <div class="product__main">
+            <div class="product__img flex1">
+              <img src="./assets/img/shop.jpg" alt="" />
+            </div>
+            <div class="product__data flex1">
+              <div class="product__info">
+                <div class="product__title">
+                  <h2>product name</h2>
+                </div>
+                <div class="product__reviews">
+                  <i class="fa fa-sharp fa-solid fa-star"></i>
+                  <i class="fa fa-sharp fa-solid fa-star"></i>
+                  <i class="fa fa-sharp fa-solid fa-star"></i>
+                  <i class="fa fa-sharp fa-solid fa-star"></i>
+                  <i class="fa fa-sharp fa-solid fa-star"></i>
+                  (18 reviews)
+                </div>
+                <h3 class="product__price">5 000 <span>tenge</span></h3>
+                <p class="product__description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non
+                  harum cumque aperiam quae in praesentium earum magnam ratione
+                  voluptas architecto quisquam, debitis dicta iusto omnis
+                  impedit laboriosam explicabo provident nulla vel soluta porro
+                  voluptatibus hic. Doloremque cumque commodi minus officia
+                  itaque, quae, eaque atque ducimus nam quia possimus nulla.
+                  Esse.
+                </p>
+                <div class="btn__container">
+                  <a href="#" class="product__btn">
+                    Add to card
+                    <i class="fa fa-solid fa-card-plus"></i>
+                  </a>
+                  <a href="#" class="product__btn remove__btn">
+                    Remover from card
+                    <i class="fa fa-solid fa-card-xmark"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="product__more__info">
+                <div class="more__info__title">
+                  <p class="availability"><strong>Availability</strong></p>
+                  <p class="shipping"><strong>Shipping</strong></p>
+                  <p class="weight"><strong>Weight</strong></p>
+                </div>
+                <div class="more__info">
+                  <p class="availability">In Stock</p>
+                  <p class="shipping">01 day shipping</p>
+                  <p class="weight">0.5 kg</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== REVIEW ====================-->
+      <section class="review">
+        <div class="review__container container">
+          <div class="review__title">
+            <h3>Reviews</h3>
+          </div>
+          <div class="review__main">
+            <form class="write__review">
+              <h3 class="write__review__title">Write review</h3>
+              <div class="write__review__main">
+                <input type="text" class="name" placeholder="Name" />
+                <input type="email" class="email" placeholder="Email" />
+              </div>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Write your comment"
+              ></textarea>
+              <input type="submit" class="send__btn" />
+            </form>
+            <div class="reviews">
+              <!-- card start -->
+              <div class="reviews__card">
+                <h5 class="reviews__title">Name 1</h5>
+                <p class="reviews__date">2023 May 5</p>
+                <div class="reviews__starts">
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__off"></i>
+                </div>
+                <p class="reviews__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, libero. Corporis modi similique repellat, molestias
+                  quasi consequatur et rerum consectetur qui corrupti eius odit
+                  sequi maiores cum atque? Fuga quo adipisci, voluptas hic
+                  reiciendis non distinctio aliquid voluptatem doloribus porro
+                  vero ipsa debitis explicabo corporis mollitia nesciunt
+                  dolores? Sunt, ex!
+                </p>
+              </div>
+              <!-- card end -->
+              <!-- card start -->
+              <div class="reviews__card">
+                <h5 class="reviews__title">Name 1</h5>
+                <p class="reviews__date">2023 May 5</p>
+                <div class="reviews__starts">
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__on"></i>
+                  <i class="fa fa-sharp fa-solid fa-star start__off"></i>
+                </div>
+                <p class="reviews__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolores, libero. Corporis modi similique repellat, molestias
+                  quasi consequatur et rerum consectetur qui corrupti eius odit
+                  sequi maiores cum atque? Fuga quo adipisci, voluptas hic
+                  reiciendis non distinctio aliquid voluptatem doloribus porro
+                  vero ipsa debitis explicabo corporis mollitia nesciunt
+                  dolores? Sunt, ex!
+                </p>
+              </div>
+              <!-- card end -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== NEW PRODUCTS ====================-->
+      <section class="products">
+        <div class="products__container container">
+          <div class="products__data review__title">
+            <h3>new product</h3>
+          </div>
+          <div class="product__cards">
+            <div class="product__card">
+              <a href="./productSingle.html">
+                <img src="./assets/img/food.jpg" alt="" />
+              </a>
+              <div class="product__card__info">
+                <div class="product__card__name">Product Name</div>
+                <div class="product__card__price">Product Price</div>
+              </div>
+              <div class="product__card__selected">
+                <a href="" class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product__card">
+              <a href="./productSingle.html">
+                <img src="./assets/img/food.jpg" alt="" />
+              </a>
+              <div class="product__card__info">
+                <div class="product__card__name">Product Name</div>
+                <div class="product__card__price">Product Price</div>
+              </div>
+              <div class="product__card__selected">
+                <a href="" class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product__card">
+              <a href="./productSingle.html">
+                <img src="./assets/img/food.jpg" alt="" />
+              </a>
+              <div class="product__card__info">
+                <div class="product__card__name">Product Name</div>
+                <div class="product__card__price">Product Price</div>
+              </div>
+              <div class="product__card__selected">
+                <a href="" class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </div>
+            </div>
+            <div class="product__card">
+              <a href="./productSingle.html">
+                <img src="./assets/img/food.jpg" alt="" />
+              </a>
+              <div class="product__card__info">
+                <div class="product__card__name">Product Name</div>
+                <div class="product__card__price">Product Price</div>
+              </div>
+              <div class="product__card__selected">
+                <a href="" class="icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SUBSCRIBE ====================-->
+      <section class="subscribe bg" id="subscribe">
+        <div class="subscribe__container container">
+          <div class="subscribe__info">
+            <h2 class="subscribe__info__title">Get an update every week</h2>
+            <p class="subscribe__info__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br />
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+          </div>
+          <div class="subscribe__form">
+            <h3>SUBSCRIBE TO NEWSLETTER</h3>
+            <form class="subscribe__form__inner">
+              <input type="email" placeholder="Email" class="email" />
+              <input type="submit" name="next" class="send__btn" value="Next" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__items">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="./index.html">diabet</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="./appointment.html">appointment</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="">products</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__items">
+          <div class="social__links">
+            <a href=""><i class="fab fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fab fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fab fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--==================== COPYRIGHT ====================-->
+    <div class="copyright">
+      <div class="copyright__container container">
+        All rights Reserved &copy; Diabet project, 2023
+      </div>
+    </div>
+  </body>
+</html>

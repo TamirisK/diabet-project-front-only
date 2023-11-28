@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo-bg.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/styles/css/nullstyle.css" />
+    <link rel="stylesheet" href="./assets/styles/css/headerShop.css" />
+    <link rel="stylesheet" href="./assets/styles/css/blockchain.css" />
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header id="header">
+      <nav class="navbar container">
+        <a class="navbar__brand" aria-current="page" href="./index.html"
+          ><img src="./assets/img/logo.png" width="118" alt="logo"
+        /></a>
+        <!-- <button class="navbar__toggler" id="navbar-toggler">X</button> -->
+        <ul class="navbar__list" id="navbar-list">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./index.html">diabet</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./appointment.html">appointment</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="">products</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./blockchain.html">blockchain</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contact.html">contact</a>
+          </li>
+        </ul>
+        <div class="icons">
+          <a href="" class="icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <a href="./login.html" class="icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== BLOCKCHAIN INFO ====================-->
+    <section class="blockchain__info">
+      <div class="blockchain__container container">
+        <div class="blockchain__data">
+          <div class="data"></div>
+          <h1 class="title data">Blockchain</h1>
+          <p class="blockchain__lenght data">Lenght - 20</p>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== BLOCKCHAIN ====================-->
+    <section class="blockchain">
+      <div class="blockchain__container container">
+        <table class="blockchain__block__table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Recipent</th>
+              <th>Amount</th>
+              <th>Time</th>
+              <th>Proof</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- start block -->
+            <tr class="start__block">
+              <td class="blockchain__block__id">
+                <h5>1</h5>
+              </td>
+              <td class="blockchain__block__recipent">Admin</td>
+              <td class="blockchain__block__amount">1200</td>
+              <td class="blockchain__block__time">2023 20 May Fri 12/00/00</td>
+              <td class="blockchain__block__proof">3705</td>
+              <td class="blockchain__block__status changed">Changed</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="prevHash">
+                Prev:
+                1234567812345678123456781234567812345678123456781234567812345678
+              </td>
+              <td colspan="3" class="thisHash">
+                This:
+                1234567812345678123456781234567812345678123456781234567812345678
+              </td>
+            </tr>
+            <!-- finish block & second start -->
+          </tbody>
+          <tbody>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <!-- start block -->
+            <tr class="start__block">
+              <td class="blockchain__block__id">
+                <h5>2</h5>
+              </td>
+              <td class="blockchain__block__recipent">Admin</td>
+              <td class="blockchain__block__amount">1200</td>
+              <td class="blockchain__block__time">2023 20 May Fri 12/00/00</td>
+              <td class="blockchain__block__proof">3705</td>
+              <td class="blockchain__block__status">Ok</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="prevHash">
+                Prev:
+                1234567812345678123456781234567812345678123456781234567812345678
+              </td>
+              <td colspan="3" class="thisHash">
+                This:
+                1234567812345678123456781234567812345678123456781234567812345678
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6"></td>
+            </tr>
+            <!-- finish block & second start -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
