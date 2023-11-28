@@ -1,0 +1,251 @@
+@import "main.scss";
+
+body{
+  background-color: $light-color;
+}
+
+main{
+  margin: $header-height 0;
+  display: flex;
+  gap: 1rem;
+}
+
+/*=============== ASIDE ===============*/
+.aside__data{
+  min-width: 250px;
+  height: fit-content;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 $bg-color;
+  .filter{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__title{
+      display: flex;
+      justify-content: space-between;
+      font-size: $h2-font-size;
+      font-weight: $font-semi-bold;
+      color: $primary-color;
+      .fa{
+        font-size: $h2-font-size;
+        font-weight: $font-semi-bold;
+        color: $primary-color;
+      }
+    }
+    &__card{
+      border-top: .1rem solid $bg-color;
+      .material-checkbox {
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        font-size: $small-font-size;
+        color: $primary-color;
+        cursor: pointer;
+        input[type="checkbox"] {
+          width: 0;
+          height: 0;
+          position: absolute;
+          opacity: 0;
+        }
+        .checkmark {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          display: inline-block;
+          position: relative;
+          border: .05rem solid $bg-color;
+          border-radius: 2px;
+          transition: all 0.3s;
+        }
+        input[type="checkbox"]:checked ~ .checkmark {
+          background-color: $primary-color;
+          border-color: $bg-color;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 7px;
+            width: 5px;
+            height: 12px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+        input[type="checkbox"]:focus ~ .checkmark {
+          box-shadow: 0 0 0 2px $bg-color;
+        }
+        &:hover input[type="checkbox"] ~ .checkmark {
+          border-color: $primary-color;
+        }
+        input[type="checkbox"]:disabled ~ .checkmark {
+          opacity: 0.5;
+          cursor: not-allowed;
+          &:hover {
+            border-color: $bg-color;
+          }
+        }
+        &:last-child{
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    &__name{
+      margin: 1rem 0;
+      font-size: $normal-font-size;
+      font-weight: $font-medium;
+      color: $primary-color;
+    }
+    .send__btn{
+      width: 100px;
+      padding: 10px 5px;
+      border-radius: 0 !important;
+      background-color: $primary-color;
+      border: 0 none;
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+
+/*=============== PRODUCTS ===============*/
+.products{
+  &__container{
+    width: 100%;
+  }
+  &__data{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  &__title{
+    a{
+      font-size: $small-font-size;
+      color: $primary-color;
+    }
+  }
+  &__sort{
+    .select {
+      width: 200px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .option {
+      width: 100%;
+      min-height: 40px;
+      padding: 0 30px 0 10px;
+      display: flex;
+      align-items: center;
+      position:absolute;
+      top:0;
+      order:2;
+      overflow: hidden;
+      pointer-events: none;
+      white-space: nowrap;
+      border-top: $primary-color solid 1px;
+      background: $bg-color;
+      color: $primary-color;
+      z-index:1;
+      transition: all .4s ease-in-out;
+      &:hover {
+        background: $primary-color;
+        color: $bg-color;
+      }
+      
+    }
+    .select:focus .option {
+      position: relative;
+      pointer-events: all;
+    }
+    input {
+      position: absolute;
+      left: -99999px;
+      opacity: 0;
+      &:checked + label {
+        position: relative;
+        order: 1;
+        background: $bg-color;
+        border-top: none;
+        z-index: 2;
+        &:after {
+          content:'';
+          width: 0; 
+          height: 0; 
+          position: absolute;
+          top: calc(50% - 2.5px);
+          right: 10px;
+          pointer-events: none;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $primary-color;
+          z-index:3;
+        }
+        &:before {
+          content: '';
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          right: 0;
+          background: $bg-color;
+        }
+      }
+    }
+  }
+}
+
+.product{
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  &__card{
+    width: 18rem;
+    height: 25rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 0 5px 0 $primary-color;
+    border: .1rem solid $primary-color;
+    transition: .5s;
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 1rem 0 $primary-color;
+    }
+    img{
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    &__info{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 1rem;
+    }
+    &__selected{
+      display: flex;
+      align-items: start;
+      i{
+        font-size: $normal-font-size;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 676px) {
+  main{
+    flex-direction: column;
+  }
+}

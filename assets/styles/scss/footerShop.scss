@@ -1,0 +1,183 @@
+@import "main.scss";
+
+/*=============== SUBSCRIBE ===============*/
+.subscribe{
+  background-image: url('../../img/info-bg.png');
+  background-size: cover;
+  background-color: $bg-color;
+  &__container{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: $primary-color;
+  }
+  &__info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    &__title{
+      font-size: $h2-font-size;
+      text-transform: uppercase;
+    }
+    &__text{
+      line-height: 1.8rem;
+      font-size: $small-font-size;
+    }
+  }
+  &__form{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    h3{
+      font-size: $normal-font-size;
+      text-transform: uppercase;
+    }
+    &__inner{
+      display: flex;
+      justify-content: end;
+      .email{
+        flex: 2;
+        border: .1rem solid $primary-color;
+        border-radius: 0 !important;
+        &:focus{
+          transform: scale(1) !important;
+        }
+      }
+      .send__btn{
+        width: 100px;
+        padding: 10px 5px;
+        border-radius: 0 !important;
+        background-color: $primary-color;
+        border: 0 none;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/*=============== FOOTER ===============*/
+.footer{
+  background-color: $primary-color;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+  }
+  &__items{
+    padding: 2rem 0;
+    .social__links{
+      display: flex;
+      gap: 1rem;
+      a{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $h2-font-size;
+        color: $bg-color;
+        transition: all 0.5s ease;
+        &:hover{
+          color: #fff;
+          transform: scale(1.1);
+        } 
+      }
+    }
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__item{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 10%;
+      display: block;
+      border-radius: 50px;
+      background-color: $bg-color;
+      width: 0%;
+      height: 1px;
+      transition: all 0.3s ease;
+    }
+    a{
+      display: inline-block;
+      padding: 1rem;
+      text-transform: capitalize;
+      font-size: $normal-font-size;
+      color: $bg-color;
+      transition: 0.5s;
+    }
+    &:hover a{
+      color: #fff;
+    }
+    &:hover:before{
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+/*=============== COPYRIGHT ===============*/
+.copyright{
+  background-color: $bg-color;
+  color: $primary-color;
+}
+
+@media (max-width: 767px) {
+  .subscribe{
+    &__container{
+      flex-direction: column;
+    }
+    &__info, &__form{
+      flex: 1;
+      width: 100%;
+    }
+  }
+  .footer{
+    background-color: $primary-color;
+    &__container{
+      flex-direction: column;
+    }
+    &__items{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .subscribe{
+    &__container{
+      flex-direction: column;
+    }
+  }
+  .footer{
+    &__list{
+      flex-direction: column;
+    }
+    &__items{
+      width: 100%;
+    }
+  }
+  .social__links{
+    justify-content: center;
+    margin-top: -2rem;
+  }
+}

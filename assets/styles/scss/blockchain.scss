@@ -1,0 +1,98 @@
+@import "main.scss";
+
+$changed-color: rgb(255, 86, 86);
+
+
+body{
+  background-color: $light-color;
+}
+
+.blockchain{
+  &__info &__container{
+    padding-top: $header-height;
+  }
+  &__data{
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    .data{
+      flex: 1;
+    }
+  }
+  &__lenght{
+    max-width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    overflow: hidden;
+    border: .1rem solid $primary-color;
+    background: transparent;
+    font-size: $normal-font-size;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  /*=============== BLOCKCHAIN TABLE ===============*/
+  &__block__table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; 
+    thead{
+      // tr {
+      //   border-bottom: .1rem solid $bg-color;
+      // }
+      th{
+        padding-bottom: 1.5rem;
+        font-weight: $font-semi-bold;
+        font-size: $normal-font-size;
+        color: #000;
+      }
+    }
+    tbody{
+      tr{
+        &.start__block{
+          border: .1rem solid $bg-color;
+          border-bottom: none;
+        }
+        td{
+          padding: 1.5rem 0;
+          &.blockchain__block__status{
+            font-size: $normal-font-size;
+            font-weight: $font-semi-bold;
+          }
+          &.changed{
+            font-size: $normal-font-size;
+            font-weight: $font-semi-bold;
+            border: .1rem solid $changed-color;
+            background-color: $changed-color;
+            color: #fff;
+          }
+          &.prevHash{
+            text-align: center;
+            font-weight: 600;
+            background-color: $primary-color;
+            color: $bg-color;
+          }
+          &.thisHash{
+            text-align: center;
+            font-weight: 600;
+            background-color: $bg-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    tbody:has(.changed), thead:has(.changed), .start__block:has(.changed){
+      border: .2rem solid $changed-color;
+    }
+    tbody:has(.changed) .prevHash{
+      background-color: $changed-color;
+      color: #fff;
+    }
+    tbody:has(.changed) .thisHash{
+      background-color: #fff;
+      color: $changed-color;
+    }
+  }
+}

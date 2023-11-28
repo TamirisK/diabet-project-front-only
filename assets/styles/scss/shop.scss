@@ -1,0 +1,381 @@
+@import "main.scss";
+
+body{
+  background-color: $light-color;
+}
+
+/*=============== WELCOME ===============*/
+.welcome{
+  background-image: url(../../img/shop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__container{
+    width: 100%;
+    height: 100vh;
+    padding-top: $header-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__data{
+    margin-top: -50px;
+    text-align: center;
+    h1{
+      margin-bottom: 2rem;
+    }
+  }
+  &__btn{
+    width: fit-content;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: .1rem solid $primary-color;
+    background: transparent;
+    color: $primary-color;
+    transition: 0.5s;
+    &:hover{
+      color: $light-color;
+      background-color: $primary-color;
+    }
+  }
+}
+
+/*=============== ADVANTAGES ===============*/
+.advantages{
+  background-color: #e2e9f0;
+  &__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 250px;
+    height: 70px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .icon{
+      flex: 1;
+      font-size: $h1-font-size;
+      color: $primary-color;
+    }
+    .advantage__title{
+      flex: 4;
+      h2{
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+/*=============== CATEGORY ===============*/
+.category{
+  &__container{
+    width: 100%;
+    padding-top: $header-height;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 350px;
+    height: 250px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px 0 $primary-color;
+    // transition: background-size 2s ease-in;
+    // &:hover{
+    //   background-size: 120%;
+    // }
+  }
+  .item__first{
+    background-image: url(../../img/accessories.jpg);
+  }
+  .item__second{
+    background-image: url(../../img/food.jpg);
+  }
+  .item__third{
+    background-image: url(../../img/glucometer.png);
+  }
+  &__title{
+    padding: 15px 25px;
+    font-size: $normal-font-size;
+    font-weight: $font-semi-bold;
+    text-transform: uppercase;
+    background-color: $light-color;
+    z-index: 5;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+
+/*=============== PRODUCTS ===============*/
+.products{
+  margin: 2rem;
+  &__container{
+    width: 100%;
+  }
+  &__title{
+    justify-content: start;
+  }
+}
+
+.product{
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  &__card{
+    width: 18rem;
+    height: 25rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 0 5px 0 $primary-color;
+    border: .1rem solid $primary-color;
+    transition: .5s;
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 1rem 0 $primary-color;
+    }
+    img{
+      width: 100%;
+      height: 15rem;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    &__info{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 1rem;
+    }
+    &__selected{
+      display: flex;
+      align-items: start;
+      i{
+        font-size: $normal-font-size;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/*=============== INFORMATION ===============*/
+.information{
+  padding: 2rem 0;
+  background-color: #e2e9f0;
+  &__container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  &__cards{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__card{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 150px;
+    .percent{
+      width: 150px;
+      height: 150px;
+      position: relative;
+      svg{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transform: rotate(270deg);
+        circle{
+          width: 100%;
+          height: 100%;
+          fill: transparent;
+          stroke-width: 2;
+          stroke: $light-color;
+          transform: translate(5px, 5px);
+          &:nth-child(2){
+            opacity: 0;
+            stroke: $primary-color;
+            stroke-dasharray: 440;
+            stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+            animation: circleAnimation 1s linear forwards;
+            animation-delay: 2s;
+          }
+        }
+      }
+      .dot{
+        position: absolute;
+        inset: 5px;
+        z-index: 10;
+        animation: dotAnimation 1.5s linear forwards;
+        &::before{
+          content: '';
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          border-radius: 50%;
+          box-shadow: 0 0 10px $primary-color, 0 0 30px $primary-color;
+          background-color: $primary-color;
+        }
+      }
+      .number{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+          color: $primary-color;
+          font-weight: 900;
+          font-size: 35px;
+        }
+      }
+      &__description{
+        max-width: 150px;
+        padding: 1rem 0;
+        font-size: $small-font-size;
+        color: $primary-color;
+        text-align: center;
+      }
+    }
+  }
+  &__text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    .subtitle{
+      height: fit-content !important;
+      margin-bottom: 2rem;
+    }
+    p{
+      font-size: $small-font-size;
+      &:last-child{
+        margin-top: 1rem;
+      }
+    }
+    a{
+      align-self: center;
+    }
+  }
+}
+
+/*=============== BLOGS ===============*/
+.blogs{
+  margin: 2rem;
+  &__container{
+    width: 100%;
+  }
+  &__title{
+    justify-content: start;
+  }
+}
+
+.blog{
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  &__card{
+    width: 25rem;
+    height: 20rem;
+    position: relative;
+    box-shadow: 0 0 5px 0 $primary-color;
+    border: .1rem solid $primary-color;
+    transition: .5s;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+    &__info{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      visibility: hidden;
+      transition: .5s;
+    }
+    &__btn{
+      color: $light-color !important;
+      background-color: $primary-color !important;
+    }
+    &:hover img{
+      background-color: $primary-color;
+      opacity: .2;
+    }
+    &:hover  &__info{
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes dotAnimation {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+@keyframes circleAnimation {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .information__container{
+    flex-direction: column-reverse;
+  }
+  .blog{
+    &__card{
+      width: 100%;
+      height: 20vh;
+    }
+  }
+}
+@media (max-width: 487px) {
+  .information__cards{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
